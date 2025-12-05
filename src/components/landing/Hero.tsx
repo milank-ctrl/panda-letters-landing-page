@@ -53,11 +53,11 @@ const Hero = () => {
           {/* Right content - Panda illustration */}
           <div className="relative flex justify-center lg:justify-end animate-fade-up animation-delay-200">
             <div className="relative">
-              <div className="absolute inset-0 bg-primary/5 rounded-full blur-3xl scale-110" />
+              <div className="absolute inset-0 bg-primary/10 rounded-full blur-3xl scale-110" />
               <img
                 src={pandaHero}
                 alt="Panda reading letters - Panda Letters mascot"
-                className="relative w-72 md:w-96 lg:w-[450px] animate-float mix-blend-multiply"
+                className="relative w-72 md:w-96 lg:w-[450px] animate-float"
               />
             </div>
           </div>
