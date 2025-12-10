@@ -2,97 +2,92 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&family=Space+Mono:wght@400;700&display=swap');
 
 @layer base {
   :root {
-    /* Panda Letters Design System */
-    --background: 45 30% 97%;
-    --foreground: 220 20% 15%;
+    /* 90s Retro Minimal Design System */
+    --background: 60 100% 97%;
+    --foreground: 0 0% 0%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 20% 15%;
+    --card-foreground: 0 0% 0%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 20% 15%;
+    --popover-foreground: 0 0% 0%;
 
-    /* Soft sage green - bamboo inspired */
-    --primary: 145 35% 45%;
+    /* Bold teal */
+    --primary: 175 80% 35%;
     --primary-foreground: 0 0% 100%;
 
-    /* Warm cream */
-    --secondary: 45 40% 94%;
-    --secondary-foreground: 220 20% 15%;
+    /* Light gray */
+    --secondary: 0 0% 92%;
+    --secondary-foreground: 0 0% 0%;
 
-    --muted: 45 20% 92%;
-    --muted-foreground: 220 10% 45%;
+    --muted: 0 0% 88%;
+    --muted-foreground: 0 0% 40%;
 
-    /* Soft coral accent for CTAs */
-    --accent: 15 85% 65%;
+    /* Hot pink accent */
+    --accent: 330 100% 50%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 80% 50%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 45 20% 88%;
-    --input: 45 20% 88%;
-    --ring: 145 35% 45%;
+    --border: 0 0% 0%;
+    --input: 0 0% 0%;
+    --ring: 175 80% 35%;
 
-    --radius: 1rem;
+    --radius: 0;
 
-    /* Panda black */
-    --panda-black: 220 20% 12%;
-    --panda-dark: 220 15% 25%;
+    /* Panda colors */
+    --panda-black: 0 0% 0%;
+    --panda-dark: 0 0% 20%;
 
-    /* Soft pastel highlights */
-    --highlight-green: 145 45% 85%;
-    --highlight-pink: 350 60% 92%;
-    --highlight-blue: 210 60% 92%;
-    --highlight-yellow: 45 80% 90%;
-
-    /* Shadows */
-    --shadow-soft: 0 4px 20px -4px hsl(220 20% 12% / 0.08);
-    --shadow-medium: 0 8px 30px -6px hsl(220 20% 12% / 0.12);
-    --shadow-large: 0 20px 50px -12px hsl(220 20% 12% / 0.15);
+    /* Bold 90s highlights */
+    --highlight-green: 120 60% 70%;
+    --highlight-pink: 330 100% 80%;
+    --highlight-blue: 200 100% 70%;
+    --highlight-yellow: 55 100% 60%;
 
     --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-foreground: 0 0% 10%;
+    --sidebar-primary: 0 0% 10%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 0 0% 95%;
+    --sidebar-accent-foreground: 0 0% 10%;
+    --sidebar-border: 0 0% 0%;
+    --sidebar-ring: 175 80% 35%;
   }
 
   .dark {
-    --background: 220 20% 10%;
-    --foreground: 45 30% 95%;
+    --background: 0 0% 5%;
+    --foreground: 0 0% 100%;
 
-    --card: 220 20% 14%;
-    --card-foreground: 45 30% 95%;
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 220 20% 14%;
-    --popover-foreground: 45 30% 95%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 145 40% 50%;
-    --primary-foreground: 220 20% 10%;
+    --primary: 175 80% 50%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 220 15% 20%;
-    --secondary-foreground: 45 30% 95%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 15% 18%;
-    --muted-foreground: 45 20% 65%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 15 80% 60%;
-    --accent-foreground: 220 20% 10%;
+    --accent: 330 100% 60%;
+    --accent-foreground: 0 0% 0%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 60% 40%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 22%;
-    --input: 220 15% 22%;
-    --ring: 145 40% 50%;
+    --border: 0 0% 100%;
+    --input: 0 0% 100%;
+    --ring: 175 80% 50%;
   }
 }
 
@@ -106,130 +101,31 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Space Mono', monospace;
   }
 }
 
 @layer components {
   .section-padding {
-    @apply px-6 py-16 md:px-8 md:py-24 lg:py-32;
+    @apply px-6 py-16 md:px-8 md:py-20;
   }
 
   .container-narrow {
-    @apply max-w-6xl mx-auto;
+    @apply max-w-4xl mx-auto;
   }
 
-  .card-soft {
-    @apply bg-card rounded-2xl shadow-soft border border-border/50;
-  }
-
-  .gradient-hero {
-    background: linear-gradient(
-      135deg,
-      hsl(var(--background)) 0%,
-      hsl(var(--highlight-green)) 50%,
-      hsl(var(--secondary)) 100%
-    );
-  }
-
-  .gradient-section {
-    background: linear-gradient(
-      180deg,
-      hsl(var(--background)) 0%,
-      hsl(var(--secondary)) 100%
-    );
+  .card-retro {
+    @apply bg-card border-2 border-foreground;
   }
 }
 
 @layer utilities {
-  .shadow-soft {
-    box-shadow: var(--shadow-soft);
-  }
-
-  .shadow-medium {
-    box-shadow: var(--shadow-medium);
-  }
-
-  .shadow-large {
-    box-shadow: var(--shadow-large);
-  }
-
   .text-balance {
     text-wrap: balance;
   }
-}
 
-/* Animations */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
+  .font-display {
+    font-family: 'VT323', monospace;
   }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes fade-up {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes scale-in {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes slide-in-left {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.animate-float {
-  animation: float 3s ease-in-out infinite;
-}
-
-.animate-fade-up {
-  animation: fade-up 0.6s ease-out forwards;
-}
-
-.animate-scale-in {
-  animation: scale-in 0.5s ease-out forwards;
-}
-
-.animate-slide-in-left {
-  animation: slide-in-left 0.5s ease-out forwards;
-}
-
-.animation-delay-100 {
-  animation-delay: 100ms;
-}
-
-.animation-delay-200 {
-  animation-delay: 200ms;
-}
-
-.animation-delay-300 {
-  animation-delay: 300ms;
-}
-
-.animation-delay-400 {
-  animation-delay: 400ms;
 }

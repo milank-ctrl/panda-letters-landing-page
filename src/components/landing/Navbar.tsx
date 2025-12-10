@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -11,63 +10,52 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background border-b-2 border-foreground">
       <div className="container-narrow px-6">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-14">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2 font-bold text-xl text-foreground">
-            <span>🐼</span>
-            <span>Panda Letters</span>
+          <a href="/" className="font-display text-2xl text-foreground">
+            🐼 PANDA LETTERS
           </a>
 
           {/* Desktop navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             <button 
               onClick={() => scrollToSection("how-it-works")}
-              className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
+              className="text-muted-foreground hover:text-foreground text-sm uppercase tracking-wide"
             >
               How It Works
             </button>
-            <button 
-              onClick={() => scrollToSection("signup")}
-              className="text-muted-foreground hover:text-foreground transition-colors text-sm font-medium"
-            >
-              Join Waitlist
-            </button>
             <Button variant="default" size="sm" onClick={() => scrollToSection("signup")}>
-              Get Started
+              Join →
             </Button>
           </div>
 
           {/* Mobile menu button */}
           <button 
-            className="md:hidden p-2"
+            className="md:hidden text-foreground text-sm uppercase"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? "[CLOSE]" : "[MENU]"}
           </button>
         </div>
 
         {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border/50 animate-fade-up">
-            <div className="flex flex-col gap-4">
+          <div className="md:hidden py-4 border-t-2 border-foreground">
+            <div className="flex flex-col gap-3">
               <button 
                 onClick={() => scrollToSection("how-it-works")}
-                className="text-muted-foreground hover:text-foreground transition-colors text-left py-2"
+                className="text-muted-foreground hover:text-foreground text-left text-sm uppercase"
               >
-                How It Works
+                → How It Works
               </button>
               <button 
                 onClick={() => scrollToSection("signup")}
-                className="text-muted-foreground hover:text-foreground transition-colors text-left py-2"
+                className="text-muted-foreground hover:text-foreground text-left text-sm uppercase"
               >
-                Join Waitlist
+                → Join Waitlist
               </button>
-              <Button variant="default" onClick={() => scrollToSection("signup")}>
-                Get Started
-              </Button>
             </div>
           </div>
         )}
