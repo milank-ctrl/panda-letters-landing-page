@@ -12,8 +12,8 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <div className="text-center lg:text-left space-y-6">
-            <p className="text-sm uppercase tracking-widest text-muted-foreground">
-              [ Now accepting signups ]
+            <p className="text-sm uppercase tracking-widest text-primary font-bold animate-pulse">
+              [ Coming Soon ]
             </p>
 
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-foreground leading-none">
