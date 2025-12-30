@@ -33,21 +33,6 @@ const Benefits = () => {
           </ul>
         </div>
 
-        {/* Stats */}
-        <div className="mt-12 flex flex-wrap justify-center gap-8 text-center">
-          <div>
-            <p className="font-display text-4xl text-primary">500+</p>
-            <p className="text-xs text-muted-foreground">SIGNUPS</p>
-          </div>
-          <div>
-            <p className="font-display text-4xl text-primary">12</p>
-            <p className="text-xs text-muted-foreground">LANGUAGES</p>
-          </div>
-          <div>
-            <p className="font-display text-4xl text-primary">100%</p>
-            <p className="text-xs text-muted-foreground">AI-POWERED</p>
-          </div>
-        </div>
       </div>
     </section>
   );
