@@ -1,131 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&family=Space+Mono:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=VT323&family=Space+Mono:wght@400;700&display=swap');
-
 @layer base {
-  :root {
-    /* 90s Retro Minimal Design System */
-    --background: 60 100% 97%;
-    --foreground: 0 0% 0%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
-
-    /* Bold teal */
-    --primary: 175 80% 35%;
-    --primary-foreground: 0 0% 100%;
-
-    /* Light gray */
-    --secondary: 0 0% 92%;
-    --secondary-foreground: 0 0% 0%;
-
-    --muted: 0 0% 88%;
-    --muted-foreground: 0 0% 40%;
-
-    /* Hot pink accent */
-    --accent: 330 100% 50%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 80% 50%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 0 0% 0%;
-    --input: 0 0% 0%;
-    --ring: 175 80% 35%;
-
-    --radius: 0;
-
-    /* Panda colors */
-    --panda-black: 0 0% 0%;
-    --panda-dark: 0 0% 20%;
-
-    /* Bold 90s highlights */
-    --highlight-green: 120 60% 70%;
-    --highlight-pink: 330 100% 80%;
-    --highlight-blue: 200 100% 70%;
-    --highlight-yellow: 55 100% 60%;
-
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 0 0% 10%;
-    --sidebar-primary: 0 0% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 0 0% 95%;
-    --sidebar-accent-foreground: 0 0% 10%;
-    --sidebar-border: 0 0% 0%;
-    --sidebar-ring: 175 80% 35%;
-  }
-
-  .dark {
-    --background: 0 0% 5%;
-    --foreground: 0 0% 100%;
-
-    --card: 0 0% 10%;
-    --card-foreground: 0 0% 100%;
-
-    --popover: 0 0% 10%;
-    --popover-foreground: 0 0% 100%;
-
-    --primary: 175 80% 50%;
-    --primary-foreground: 0 0% 0%;
-
-    --secondary: 0 0% 15%;
-    --secondary-foreground: 0 0% 100%;
-
-    --muted: 0 0% 20%;
-    --muted-foreground: 0 0% 60%;
-
-    --accent: 330 100% 60%;
-    --accent-foreground: 0 0% 0%;
-
-    --destructive: 0 60% 40%;
-    --destructive-foreground: 0 0% 100%;
-
-    --border: 0 0% 100%;
-    --input: 0 0% 100%;
-    --ring: 175 80% 50%;
-  }
+     :root {
+        /* 90s Retro Minimal Design System */
+        --background: 60 100% 97%;
+        --foreground: 0 0% 0%;
+        --card: 0 0% 100%;
+        --card-foreground: 0 0% 0%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 0 0% 0%;
+        /* Bold teal */
+        --primary: 175 80% 35%;
+        --primary-foreground: 0 0% 100%;
+        /* Light gray */
+        --secondary: 0 0% 92%;
+        --secondary-foreground: 0 0% 0%;
+        --muted: 0 0% 88%;
+        --muted-foreground: 0 0% 40%;
+        /* Hot pink accent */
+        --accent: 330 100% 50%;
+        --accent-foreground: 0 0% 100%;
+        --destructive: 0 80% 50%;
+        --destructive-foreground: 0 0% 100%;
+        --border: 0 0% 0%;
+        --input: 0 0% 0%;
+        --ring: 175 80% 35%;
+        --radius: 0;
+        /* Panda colors */
+        --panda-black: 0 0% 0%;
+        --panda-dark: 0 0% 20%;
+        /* Bold 90s highlights */
+        --highlight-green: 120 60% 70%;
+        --highlight-pink: 330 100% 80%;
+        --highlight-blue: 200 100% 70%;
+        --highlight-yellow: 55 100% 60%;
+        --sidebar-background: 0 0% 98%;
+        --sidebar-foreground: 0 0% 10%;
+        --sidebar-primary: 0 0% 10%;
+        --sidebar-primary-foreground: 0 0% 98%;
+        --sidebar-accent: 0 0% 95%;
+        --sidebar-accent-foreground: 0 0% 10%;
+        --sidebar-border: 0 0% 0%;
+        --sidebar-ring: 175 80% 35%;
+    }
+    .dark {
+        --background: 0 0% 5%;
+        --foreground: 0 0% 100%;
+        --card: 0 0% 10%;
+        --card-foreground: 0 0% 100%;
+        --popover: 0 0% 10%;
+        --popover-foreground: 0 0% 100%;
+        --primary: 175 80% 50%;
+        --primary-foreground: 0 0% 0%;
+        --secondary: 0 0% 15%;
+        --secondary-foreground: 0 0% 100%;
+        --muted: 0 0% 20%;
+        --muted-foreground: 0 0% 60%;
+        --accent: 330 100% 60%;
+        --accent-foreground: 0 0% 0%;
+        --destructive: 0 60% 40%;
+        --destructive-foreground: 0 0% 100%;
+        --border: 0 0% 100%;
+        --input: 0 0% 100%;
+        --ring: 175 80% 50%;
+    }
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    @apply bg-background text-foreground antialiased;
-    font-family: 'Space Mono', monospace;
-  }
+    * {
+        @apply border-border;
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        @apply bg-background text-foreground antialiased;
+        font-family: 'Space Mono', monospace;
+    }
 }
 
 @layer components {
-  .section-padding {
-    @apply px-6 py-16 md:px-8 md:py-20;
-  }
-
-  .container-narrow {
-    @apply max-w-4xl mx-auto;
-  }
-
-  .card-retro {
-    @apply bg-card border-2 border-foreground;
-  }
+    .section-padding {
+        @apply px-6 py-16 md:px-8 md:py-20;
+    }
+    .container-narrow {
+        @apply max-w-4xl mx-auto;
+    }
+    .card-retro {
+        @apply bg-card border-2 border-foreground;
+    }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
 
-  .font-display {
-    font-family: 'VT323', monospace;
-  }
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+    .font-display {
+        font-family: 'VT323', monospace;
+    }
 }

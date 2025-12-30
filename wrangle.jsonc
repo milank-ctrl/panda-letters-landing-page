@@ -1,0 +1,8 @@
+{
+    "$schema": "./node_modules/wrangler/config-schema.json",
+    "name": "cloudflare-panda-letter-page",
+    "compatibility_date": "2025-12-30",
+    "assets": {
+      "not_found_handling": "single-page-application"
+    }
+  }
