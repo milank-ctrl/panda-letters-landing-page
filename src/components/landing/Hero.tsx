@@ -41,11 +41,15 @@ const Hero = () => {
 
           {/* Right content - Panda illustration */}
           <div className="flex justify-center lg:justify-end">
-            <div className="border-2 border-foreground bg-card p-4">
+            <div className="relative">
               <img
                 src={pandaHero}
                 alt="Panda mascot"
-                className="w-64 md:w-80"
+                className="w-64 md:w-80 opacity-90"
+                style={{
+                  maskImage: 'radial-gradient(ellipse 80% 80% at center, black 40%, transparent 100%)',
+                  WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at center, black 40%, transparent 100%)'
+                }}
               />
             </div>
           </div>
