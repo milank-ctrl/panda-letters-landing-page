@@ -26,14 +26,14 @@ const EmailPreview = () => {
               {/* Story */}
               <div>
                 <p className="text-xs text-muted-foreground mb-1">LEVEL: BEGINNER</p>
-                <h3 className="font-display text-2xl text-foreground">Марков дан</h3>
-                <p className="text-xs text-muted-foreground italic">Marko's Day</p>
+                <h3 className="font-display text-2xl text-foreground">Markov dan</h3>
+                <p className="text-xs text-muted-foreground italic">{"Marko's Day"}</p>
               </div>
 
               <div className="border-2 border-foreground p-3 bg-highlight-yellow">
                 <p className="text-sm text-foreground">
-                  <strong>Марко</strong> се буди рано. 
-                  Он пије <u>кафу</u> и једе <u>хлеб</u>.
+                  <strong>Marko</strong> se budi rano. 
+                  On pije <u>kafu</u> i jede <u>hleb</u>.
                 </p>
               </div>
 
@@ -46,10 +46,10 @@ const EmailPreview = () => {
                 <p className="text-xs font-bold text-foreground mb-2">VOCABULARY:</p>
                 <div className="grid grid-cols-2 gap-2 text-sm">
                   <div className="bg-secondary border-2 border-foreground p-2">
-                    <span className="font-bold">кафа</span> = coffee
+                    <span className="font-bold">kafa</span> = coffee
                   </div>
                   <div className="bg-secondary border-2 border-foreground p-2">
-                    <span className="font-bold">хлеб</span> = bread
+                    <span className="font-bold">hleb</span> = bread
                   </div>
                 </div>
               </div>
